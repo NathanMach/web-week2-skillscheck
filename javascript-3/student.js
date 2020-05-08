@@ -6,20 +6,34 @@
 
 // Code Here
 
+var groceries = ['fish', 'eggs', 'milk'];
+
 //////////////////STEP 2////////////////////
 //Create a variable called 'yourName' that is assigned the value of your name as a string. 
 
 // Code Here
+
+var yourName = 'Nathan'
 
 //////////////////STEP 3////////////////////
 //Create a function called 'setGroceryListTitle' that takes in one parameter called 'x'. The function should return a string of 'XPARAM's Grocery List'.
 
 // Code Here
 
+function setGroceryListTitle(x){
+
+}
+
+
+
 //////////////////STEP 4////////////////////
 //Create a function called 'addItem' that takes in one parameter called 'item'. Add the item parameter to the end of the groceries array created above. Inside of addItem, invoke displayData() which is a function you did not create (we did) that takes care of some of the work for getting your page to display correctly.
 
 // Code Here
+
+function addItem(item){
+
+}
 
 //////////////////STEP 5////////////////////
 //Create a function called 'removeItem' that takes in one parameter called 'index'. Inside of the removeItem function, remove the item that corresponds to the index parameter from the groceries array above by using splice. Then, invoke the displayData() function inside of your removeItem function.
