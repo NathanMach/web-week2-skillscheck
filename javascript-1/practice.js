@@ -37,8 +37,10 @@ return num1 + num2
 // Create a function called 'lovesCodeChecker' that takes in a single parameter called 'x'. Check to see if 'x' is equal to true. If it is, return a true boolean. If 'x' does not equal true, return a false boolean.  
 
 //Code here
-function lovesCodeChecker(){
-
+function lovesCodeChecker(x){
+	if( x === true){
+	return true}
+	else return false
 }	
 
 //////////////////PROBLEM 6////////////////////
@@ -47,7 +49,12 @@ function lovesCodeChecker(){
 
 //Code here
 
-function oddChecker() {
+function oddChecker(num) {
+	if(num % 2 === 1){
+		return 'the number is odd'
+	} else if(num % 2 === 0){
+		return 'the number is even'
+	}
 
 }
 
@@ -58,8 +65,8 @@ function oddChecker() {
 
 //Code Here
 
-function iLove() {
-
+function iLove(name, love) {
+	return `${name} loves ${love}`
 }
 
 
@@ -112,13 +119,14 @@ let me ={
 
 function bigOrSmall(arr){
 	let answers = []
-	for(let i = 0; i < numArr.length; i++){
-		if(arr [i] % 100 >= 0){
-		  oddArr.push(answers[i]);
-		} else {
-		  evenArr.push(answers[i])
+	for(i = 0; i < arr.length; i++){
+		if(arr[i] <= 100){
+		answers.push('small')
+		} else if (arr[i] > 100){
+		 answers.push('big')
 		}
-	  }
+	} 
+	return answers
 }
 
 //////////////////PROBLEM 13////////////////////
@@ -127,6 +135,12 @@ function bigOrSmall(arr){
 
 //Code Here
 
+function arrayReverser(arr){
+	let reversed = []
+	for(i = arr.length-1; i >=0; i--){
+	reversed.push(arr[i]) 	
+	} return reversed
+}
 //////////////////PROBLEM 14 - 18 Setup////////////////////
 
 // Below is an array, myNumbers. You will be using .map, .filter, .reduce and .forEach to manipulate the array in the following problems.
@@ -149,6 +163,8 @@ let doubled = myNumbers.map(function(element){
 
 // Code Here
 
+let filtered = myNumbers.filter(element => element > 100)
+
 // let filtered = myNumbers.filter(function(element){
 // })
 
@@ -168,7 +184,11 @@ let total = myNumbers.reduce(function(acc, element){
 
 // Code Here
 
+ let myNumbersIndex = []
 
+	 myNumbers.forEach (function(element, index){
+		 myNumbersIndex.push (index)
+	 })
 
 //////////////////PROBLEM 18////////////////////
 
@@ -177,8 +197,13 @@ const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
 
 // Code Here
 
-const forTheLoveOfGeorge = notGeorge.map(element => {element === 'George'})
+let forTheLoveOfGeorge = []
 
+forTheLoveOfGeorge = notGeorge.map(element => {
+	if(element !== 'George'){
+		return 'George'
+	}
+})
 
 
 //////////////////PROBLEM 19////////////////////
@@ -195,12 +220,15 @@ const people = [
 
 // Code Here
 
-// let enemies = people.filter(function(element =>))
+let enemies = people.filter(element => element.friend !== true)	
+
 
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
 // Code Here
+let totallyAwesome = people.reduce((acc, element) => acc + element.awesomeLevel, 0) 
+
 
 

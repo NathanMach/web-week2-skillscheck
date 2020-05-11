@@ -27,14 +27,16 @@ var name = 'Nathan'
 
 // Code Here
 
-var phrase = ""
+var phrase = "I do not love to code"
 
 //////////////////STEP 5////////////////////
 //Create an if statement that checks to see if the lovesCode variable is equal to true. If it is, set the phrase variable created above to 'I love code', it it's not true set the phrase variable to 'I do not love to code'
 
 // Code Here
 
-
+if(lovesCode === false){
+    `${phrase}`
+}
 
 
 //////////////////Wrap Up////////////////////
